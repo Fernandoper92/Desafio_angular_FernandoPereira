@@ -1,0 +1,12 @@
+<div class="card d-flex align-items-center justify-content-center h-100">
+  <div class="card-body">
+    <dx-text-box class="m-2" placeholder="Digite o nome da cidade" [(value)]="textBoxValue">
+    </dx-text-box>
+    <dx-select-box class="m-2" placeholder="Selecione o estado" [dataSource]="stateslist" valueExpr="sigla"
+      [(value)]="selectBoxValue" displayExpr="nome"></dx-select-box>
+    <dx-button class="btn-primary m-2" text="Pesquisar!" (onClick)="getWeather(textBoxValue,selectBoxValue)">
+    </dx-button>
+    <dx-text-area class="m-2" [(value)]="textAreaValue" [readOnly]="true">
+    </dx-text-area>
+  </div>
+</div>
